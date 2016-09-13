@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import jfxtras.scene.control.agenda.*?>
+<?import jfxtras.internal.scene.control.skin.agenda.*?>
+<?import jfxtras.animation.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project2.HomePageController">
+   <children>
+      <SplitPane dividerPositions="0.1991701244813278" layoutX="1.0" orientation="VERTICAL" prefHeight="484.0" prefWidth="798.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../hello_logo_hero.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="683.0" layoutY="26.0" mnemonicParsing="false" onAction="#cancel" text="Logout" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane layoutX="7.0" prefHeight="402.0" prefWidth="788.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Home">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <DatePicker layoutX="28.0" layoutY="22.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Calendar">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          <Agenda id="id1"/>
+                        </content>
+                      </Tab>
+                        <Tab text="Notification">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="91.0" prefWidth="686.0" />
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
